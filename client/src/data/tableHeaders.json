@@ -1,0 +1,14 @@
+[
+	{ "name": "id", "label": "ID" },
+	{ "name": "full_name", "label": "Full Name" },
+	{ "name": "phone", "label": "Phone" },
+	{ "name": "email", "label": "Email" },
+	{ "name": "age", "label": "Age" },
+	{ "name": "experience", "label": "Experience" },
+	{ "name": "yearly_income", "label": "Yearly Income" },
+	{ "name": "has_children", "label": "Has children" },
+	{ "name": "license_states", "label": "License states" },
+	{ "name": "expiration_date", "label": "Expiration date" },
+	{ "name": "license_number", "label": "License number" },
+	{ "name": "duplicate_with", "label": "Duplicate with" }
+]
