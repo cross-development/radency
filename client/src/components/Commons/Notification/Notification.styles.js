@@ -2,6 +2,19 @@
 import styled from 'styled-components';
 
 const ErrorWrapper = styled.div`
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+`;
+
+const ErrorWindow = styled.div`
 	color: #fff;
 
 	display: block;
@@ -9,7 +22,7 @@ const ErrorWrapper = styled.div`
 	margin: 5rem auto;
 	padding: 1rem;
 
-	position: relative;
+	position: absolute;
 	width: 70%;
 	text-align: center;
 	border-radius: 10px;
@@ -46,4 +59,4 @@ const ErrorMessage = styled.p`
 	text-transform: uppercase;
 `;
 
-export { ErrorWrapper, ErrorMessage, CloseBtn };
+export { ErrorWrapper, ErrorWindow, ErrorMessage, CloseBtn };

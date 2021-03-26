@@ -5,7 +5,7 @@ import ButtonImport from 'components/ButtonImport';
 import LawyerTable from 'components/LawyerTable';
 import ModalWindow from 'components/ModalWindow';
 import { Notification, Loader } from 'components/Commons';
-//API
+//Services
 import csvApi from 'services/csvApi';
 
 const HomePage = () => {
@@ -43,7 +43,7 @@ const HomePage = () => {
 	};
 
 	return (
-		<section>
+		<>
 			<ButtonImport onOpenModal={handleOpenModal} />
 
 			{users.length > 0 && <LawyerTable usersData={users} />}
@@ -58,7 +58,7 @@ const HomePage = () => {
 			)}
 
 			{isLoading && <Loader onLoad={isLoading} />}
-		</section>
+		</>
 	);
 };
 

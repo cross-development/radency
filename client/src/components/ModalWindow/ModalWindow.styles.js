@@ -2,11 +2,15 @@
 import styled from 'styled-components';
 
 const ModalWrapper = styled.div`
-	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(8px);
 
-	width: 20%;
+	width: 310px;
 	border-radius: 10px;
-	position: relative;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 	display: flex;
 	align-items: center;
@@ -46,15 +50,14 @@ const InputWrapper = styled.div`
 		height: 70px;
 		margin-bottom: 2rem;
 		border-radius: 50px;
-		background-color: ${({ isAccepted }) => (isAccepted ? '#507bfc' : 'transparent')};
+		background-color: transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 28px;
-		color: ${({ isAccepted }) => (isAccepted ? '#ffffff' : '#98a0a6')};
+		color: #98a0a6;
 		cursor: pointer;
-		box-shadow: ${({ isAccepted }) =>
-			isAccepted ? '0px 0px 20px 5px rgba(80, 123, 252, 0.8)' : '0px 0px 2px 0px #707070'};
+		box-shadow: 0px 0px 4px 1px #000000;
 	}
 
 	& input {
@@ -68,7 +71,7 @@ const InputWrapper = styled.div`
 `;
 
 const Label = styled.p`
-	color: #2d3436;
+	color: #000000;
 	text-align: center;
 `;
 

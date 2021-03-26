@@ -11,22 +11,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
     }
 
-    section {
-        min-height: 100%;
-        padding: 5rem 0 1rem;
+    #root {
+        height: 100vh;
     }
 `;
-
-export const size = {
-	mobile: '320px',
-	tablet: '768px',
-	desktop: '1280px',
-};
-
-export const device = {
-	mobile: `screen and (min-width: ${size.mobile})`,
-	tablet: `screen and (min-width: ${size.tablet})`,
-	desktop: `screen and (min-width: ${size.desktop})`,
-};
 
 export default GlobalStyle;

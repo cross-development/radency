@@ -2,15 +2,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 //Styles
-import { ErrorWrapper, CloseBtn, ErrorMessage } from './Notification.styles';
+import { ErrorWrapper, ErrorWindow, CloseBtn, ErrorMessage } from './Notification.styles';
 
 const Notification = ({ message, onCloseNotification }) => (
 	<ErrorWrapper>
-		<CloseBtn type="button" onClick={onCloseNotification}>
-			&#10005;
-		</CloseBtn>
+		<ErrorWindow>
+			<CloseBtn type="button" onClick={onCloseNotification}>
+				&#10005;
+			</CloseBtn>
 
-		<ErrorMessage>{message}</ErrorMessage>
+			<ErrorMessage>{message}</ErrorMessage>
+		</ErrorWindow>
 	</ErrorWrapper>
 );
 
