@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 //Axios defaults config
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = 'https://young-hamlet-11523.herokuapp.com';
 
 const sendCSVToValidate = ({ usersData }) => onSuccess => onError => onFinally => {
 	axios
