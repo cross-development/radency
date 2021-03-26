@@ -15,13 +15,24 @@ async function handleCSVFile(req, res) {
 		};
 	});
 
-	const response = data.map(({ id, email, phone, ...rest }, idx) => {
-		
+	const response = data.map(({ id, email, phone, ...rest }, idx, array) => {
+		if (idx < array.length) {
+			const newArray = [...array.slice(0, idx), ...array.slice(idx + 1)];
 
-		return { id, email, phone, ...rest, duplicate_with: duplicatedUser?.id || '' };
+			const duplicatedUser = newArray.find((item, j, arr) => {
+				if (j < arr.length) {
+					return (
+						email.toLowerCase() === item.email.toLowerCase() ||
+						phone.toString().slice(-10) === item.phone.toString().slice(-10)
+					);
+				}
+			});
+
+			return { id, email, phone, ...rest, duplicate_with: duplicatedUser?.id || '-' };
+		}
 	});
 
-	console.log('response', response);
+	res.status(200).json(response);
 }
 
 module.exports = { handleCSVFile };
